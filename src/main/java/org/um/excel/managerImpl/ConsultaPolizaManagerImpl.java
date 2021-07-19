@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 @Service("ConsultaPolizaManager")
 public class ConsultaPolizaManagerImpl implements ConsultaPolizaManager {
@@ -139,7 +140,7 @@ public class ConsultaPolizaManagerImpl implements ConsultaPolizaManager {
 
         row = sheet.createRow(rownum);
         cell = row.createCell(8);
-        cell.setCellValue((Calendar) fechaStyle);
+        cell.setCellValue(new Date());
         cell.setCellStyle(headerCellStyle);
 
 
